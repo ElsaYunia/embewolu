@@ -1,0 +1,82 @@
+<!DOCTYPE html><!-- HTML 5 -->
+<html dir="ltr" lang="en-US">
+<head>
+<title> How To Create Image Slideshow For Website Using HTML And jQuery </title>
+<style>
+/* How To Create Image Slideshow For Website Using HTML And jQuery */
+#slideshow {
+	width: 900px;
+	height: 304px;
+	margin: 10px auto 0 auto;
+}
+
+#slideshow .Wrapper-slideshow {
+	width: 900px;
+	height: 304px;
+	float: left;
+	overflow: hidden;
+	border: 8px solid #BDBDBD;
+}
+
+#slideshow .Content-slideshow {
+	height: 354px;
+}
+
+#Nav-slideshow {
+	width: 600px;
+	height: 30px;
+	margin: -30px 0 0 10px;
+	position: absolute;
+	z-index: 10;
+}
+
+#Nav-slideshow a {
+	width: 10px;
+	height: 10px;
+	overflow: hidden;
+	border-radius: 6px;
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	color: #666;
+	background: #666;
+	border: 1px solid #ccc;
+	display: block;
+	margin: 0 10px;
+	float: left;
+}
+
+#Nav-slideshow a.activeSlide{
+	background: #222;
+	border: 3px solid #eee;
+	-moz-border-radius: 8px;
+	margin: -2px 8px;
+}
+</style>
+<script type='text/javascript' src='jquery.js'></script>
+<script type="text/javascript">
+		/* <![CDATA[ */
+		var $j = jQuery.noConflict();
+		$j(document).ready(function () {
+			$j("#Content-slideshow").cycle({
+				fx: 'fade', // choose your transition type, ex: fade, scrollUp, shuffle, etc...
+				pager:  '#Nav-slideshow'
+			});
+		});
+		/* ]]> */
+		</script>	
+</head>
+<body>
+<div class="slideshow">
+			<div class="Wrapper-slideshow">
+			     <div id="Content-slideshow" class="Content-slideshow">
+			            <div class="featureItem"><a href="http://tutorial.world.edu"><img src="http://4.bp.blogspot.com/-ynZw5QSnLRY/UZB9n2ekJKI/AAAAAAAAAaA/dKFy95VvmMQ/s1600/How+To+Create+Image+Slideshow+For+Website+Using+HTML+And+jQuery+1.jpg" title=" How To Create Image Slideshow For Website Using HTML And jQuery " alt=" How To Create Image Slideshow For Website Using HTML And jQuery " width="900px" height="304px"/></a></div>
+			            <div class="featureItem"><a href="http://tutorial.world.edu"><img src="http://2.bp.blogspot.com/-NgTgS3LgMVw/UZB9vxL-neI/AAAAAAAAAaI/sr-nHnHWVBA/s1600/How+To+Create+Image+Slideshow+For+Website+Using+HTML+And+jQuery+2.jpg" title=" How To Create Image Slideshow For Website Using HTML And jQuery " alt=" How To Create Image Slideshow For Website Using HTML And jQuery " width="900px" height="304px"/></a></div>
+			            <div class="featureItem"><a href="http://tutorial.world.edu"><img src="http://4.bp.blogspot.com/-42Eqgig3Xtc/UZB92lKuu_I/AAAAAAAAAaQ/dt69aDTCNVU/s1600/How+To+Create+Image+Slideshow+For+Website+Using+HTML+And+jQuery+3.jpg" title=" How To Create Image Slideshow For Website Using HTML And jQuery " alt=" How To Create Image Slideshow For Website Using HTML And jQuery " width="900px" height="304px"/></a></div>
+			            <div class="featureItem"><a href="http://tutorial.world.edu"><img src="http://4.bp.blogspot.com/-71fE1z_T0Ug/UZB9_wfU01I/AAAAAAAAAaY/1rMAf5kP8tI/s1600/How+To+Create+Image+Slideshow+For+Website+Using+HTML+And+jQuery+4.jpg" title=" How To Create Image Slideshow For Website Using HTML And jQuery " alt=" How To Create Image Slideshow For Website Using HTML And jQuery " width="900px" height="304px"/></a></div>
+			    </div>
+            <div id="Nav-slideshow"></div>		
+			</div>
+</div>
+<script type='text/javascript' src='cycle.js'></script>
+</body>
+</html>
